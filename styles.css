@@ -1,0 +1,58 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.joke {
+  padding: 1rem;
+  max-width: 15rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+}
+@media (min-width: 576px) {
+  .joke {
+    max-width: 20rem;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .joke {
+    max-width: 25rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .joke {
+    max-width: 80%;
+  }
+}
+
+button {
+  background-color: #F1D360;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.5rem;
+  border: 3px solid #000000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  box-shadow: 5px 5px 2px black;
+}
+@media (min-width: 576px) {
+  button {
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
