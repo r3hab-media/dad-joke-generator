@@ -53,6 +53,30 @@ function displayJokeFromUrl() {
 // Usage
 getDailyDadJoke();
 
+async function shareJoke() {
+	const joke = badJoke.innerText;
+	// const msg = `\n\nYou can find more of these at <a href="dailydadjokes.com">dailydadjokes.com</a>`;
+	// const url = window.location.href;
+
+	if (navigator.share) {
+		try {
+			await navigator.share({
+				title: "Daily Dad Joke",
+				text: joke,
+				// text: msg,
+			});
+			console.log("Joke shared successfully");
+		} catch (error) {
+			console.error("Error sharing joke:", error);
+		}
+	} else {
+		console.log("Web Share API not supported");
+		// You can add a fallback sharing method here, e.g. copying the unique URL to the clipboard
+	}
+}
+
+shareJokeButton.addEventListener("click", shareJoke);
+
 document.addEventListener("DOMContentLoaded", () => {
 	displayJokeFromUrl();
 });
